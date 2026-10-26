@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512">
+  <g id="icon">
+    <rect x="98" y="114" width="284" height="284" rx="64" fill="none" stroke="#10213d" stroke-width="36"/>
+    <circle cx="330" cy="330" r="76" fill="#c9f25b" stroke="#10213d" stroke-width="16"/>
+  </g>
+  <g id="wordmark">
+    <text x="440" y="286" font-family="Helvetica, Arial, sans-serif" font-size="84" font-weight="400" fill="#10213d">swg<tspan font-weight="700">digital</tspan></text>
+  </g>
+</svg>

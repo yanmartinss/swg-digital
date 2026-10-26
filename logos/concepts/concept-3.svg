@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512">
+  <g id="icon">
+    <rect x="80" y="96" width="320" height="320" rx="72" fill="#10213d"/>
+    <rect x="140" y="270" width="48" height="94" rx="12" fill="#c9f25b"/>
+    <rect x="216" y="214" width="48" height="150" rx="12" fill="#c9f25b"/>
+    <rect x="292" y="152" width="48" height="212" rx="12" fill="#c9f25b"/>
+  </g>
+  <g id="wordmark">
+    <text x="440" y="286" font-family="Helvetica, Arial, sans-serif" font-size="84" font-weight="700" fill="#10213d">SWG</text>
+    <text x="440" y="366" font-family="Helvetica, Arial, sans-serif" font-size="60" font-weight="400" fill="#10213d">Digital</text>
+  </g>
+</svg>
