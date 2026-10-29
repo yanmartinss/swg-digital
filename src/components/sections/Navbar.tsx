@@ -26,13 +26,13 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-7 lg:px-10">
-        <Logo className="text-2xl" />
-        <div className="hidden items-center gap-10 text-base font-medium text-navy/70 xl:flex">
+      <nav className="relative z-10 mx-auto flex h-16 max-w-[1280px] items-center justify-between px-6 lg:px-10">
+        <Logo className="text-xl" />
+        <div className="hidden items-center gap-9 text-sm font-medium text-ink xl:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
-              className="transition hover:text-navy"
+              className="transition hover:text-muted"
               href={link.href}
             >
               {link.label}
@@ -40,12 +40,12 @@ export function Navbar() {
           ))}
         </div>
         <div className="hidden xl:block">
-          <Button href="#contato" className="!px-7 !py-3.5">
+          <Button href="#contato">
             Vamos conversar <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
         <button
-          className="-mr-2 p-2 xl:hidden"
+          className="-mr-2 p-2 text-ink xl:hidden"
           onClick={() => setOpen(true)}
           aria-label="Abrir menu"
           aria-expanded={open}
@@ -56,7 +56,7 @@ export function Navbar() {
       </nav>
 
       <div
-        className={`fixed inset-0 z-40 bg-navy/60 transition-opacity duration-500 xl:hidden ${
+        className={`fixed inset-0 z-40 bg-ink/40 transition-opacity duration-500 xl:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setOpen(false)}
@@ -65,25 +65,25 @@ export function Navbar() {
       <aside
         id="menu-lateral"
         inert={!open}
-        className={`fixed inset-y-0 right-0 z-50 flex w-[85%] max-w-sm flex-col bg-navy px-8 py-7 text-white shadow-2xl transition-transform duration-500 ease-out xl:hidden ${
+        className={`fixed inset-y-0 right-0 z-50 flex w-[85%] max-w-sm flex-col bg-canvas px-8 py-5 text-ink shadow-2xl transition-transform duration-500 ease-out xl:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
         aria-label="Menu"
       >
         <button
-          className="-mr-2 mb-10 self-end p-2"
+          className="-mr-2 mb-8 self-end p-2"
           onClick={() => setOpen(false)}
           aria-label="Fechar menu"
         >
           <X className="h-7 w-7" />
         </button>
-        <nav className="flex flex-col gap-2">
+        <nav className="flex flex-col">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="border-b border-white/15 py-5 font-display text-3xl font-semibold tracking-[-0.02em] transition hover:text-tangerine"
+              className="border-b border-hairline py-5 font-display text-3xl font-medium tracking-[-0.03em] transition hover:text-muted"
             >
               {link.label}
             </a>
@@ -92,9 +92,9 @@ export function Navbar() {
         <Button
           href="#contato"
           onClick={() => setOpen(false)}
-          className="mt-10 w-full"
+          className="mt-10 !h-12 w-full"
         >
-          Vamos conversar <ArrowRight className="h-5 w-5" />
+          Vamos conversar <ArrowRight className="h-4 w-4" />
         </Button>
       </aside>
     </>

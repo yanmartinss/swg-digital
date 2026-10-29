@@ -4,17 +4,16 @@ import type {
   ReactNode,
 } from "react";
 
-type Variant = "primary" | "dark" | "ghost";
+type Variant = "primary" | "secondary" | "onColor";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-tangerine px-9 py-5 font-bold text-navy hover:-translate-y-1 hover:bg-navy hover:text-white",
-  dark: "bg-navy px-9 py-5 font-bold text-white hover:-translate-y-1 hover:bg-tangerine hover:text-navy",
-  ghost: "px-5 py-5 font-semibold text-navy/70 hover:text-navy",
+  primary: "bg-ink text-white hover:bg-ink-active",
+  secondary: "border border-hairline bg-canvas text-ink hover:bg-surface-card",
+  onColor: "bg-canvas text-ink hover:bg-white",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full text-center text-base transition duration-500 ease-out";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-center text-sm font-semibold transition duration-500 ease-out hover:-translate-y-1";
 
 type CommonProps = {
   variant?: Variant;

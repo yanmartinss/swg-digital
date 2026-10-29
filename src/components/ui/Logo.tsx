@@ -8,12 +8,12 @@ export function Logo({ withMark = true, className = "" }: LogoProps) {
     <a
       href="#inicio"
       aria-label="SWG Digital início"
-      className={`flex items-center gap-2 font-bold tracking-[-0.06em] ${className}`}
+      className={`flex items-center gap-2.5 font-display font-medium tracking-[-0.04em] text-ink ${className}`}
     >
       {withMark && (
         <svg
           viewBox="32 32 448 448"
-          className="h-10 w-10 shrink-0 rounded-[23%] ring-1 ring-navy/10"
+          className="h-10 w-10 shrink-0 rounded-[23%]"
           aria-hidden="true"
         >
           <rect
@@ -22,11 +22,11 @@ export function Logo({ withMark = true, className = "" }: LogoProps) {
             width="448"
             height="448"
             rx="104"
-            fill="#0f1d40"
+            fill="#0a0a0a"
           />
-          <rect x="96" y="130" width="320" height="72" rx="36" fill="#ff6a3d" />
-          <rect x="96" y="220" width="240" height="72" rx="36" fill="#cfc7ff" />
-          <rect x="96" y="310" width="160" height="72" rx="36" fill="#ffffff" />
+          <rect x="96" y="130" width="320" height="72" rx="36" fill="#ff4d8b" />
+          <rect x="96" y="220" width="240" height="72" rx="36" fill="#b8a4ed" />
+          <rect x="96" y="310" width="160" height="72" rx="36" fill="#fffaf0" />
         </svg>
       )}
       <span>SWG Digital</span>

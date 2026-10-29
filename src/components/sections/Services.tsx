@@ -1,25 +1,13 @@
-import { ArrowRight } from "lucide-react";
 import { services } from "../../data/content";
 import { SectionHeading } from "../ui/SectionHeading";
 
 type Service = (typeof services)[number];
 
+// Cores em sequência, sem repetir a mesma cor em cards seguidos (regra do DESIGN.md).
 const tones = [
-  {
-    card: "bg-white text-navy ring-1 ring-navy/10",
-    text: "text-navy/65",
-    icon: "bg-lilac text-navy",
-  },
-  {
-    card: "bg-lilac text-navy",
-    text: "text-navy/70",
-    icon: "bg-white text-navy",
-  },
-  {
-    card: "bg-navy text-white",
-    text: "text-white/70",
-    icon: "bg-tangerine text-navy",
-  },
+  { card: "bg-brand-pink", title: "text-ink", text: "text-ink/80" },
+  { card: "bg-brand-teal", title: "text-white", text: "text-white/80" },
+  { card: "bg-brand-lavender", title: "text-ink", text: "text-ink/80" },
 ];
 
 function ServiceCard({
@@ -33,22 +21,17 @@ function ServiceCard({
 
   return (
     <div
-      className={`group grid gap-8 rounded-[2.5rem] p-8 transition duration-500 ease-out hover:-translate-y-1.5 sm:p-12 md:grid-cols-[auto_1fr_auto] md:items-center ${tone.card}`}
+      className={`flex min-h-[320px] flex-col rounded-3xl p-8 transition duration-500 ease-out hover:-translate-y-1.5 ${tone.card}`}
     >
-      <div
-        className={`flex h-20 w-20 items-center justify-center rounded-full ${tone.icon}`}
-      >
-        <Icon className="h-9 w-9" />
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-canvas text-ink">
+        <Icon className="h-6 w-6" />
       </div>
-      <div>
-        <h3 className="text-3xl font-semibold tracking-[-0.02em] sm:text-4xl">
-          {service.title}
-        </h3>
-        <p className={`mt-3 max-w-2xl text-lg leading-8 ${tone.text}`}>
-          {service.description}
-        </p>
-      </div>
-      <ArrowRight className="hidden h-9 w-9 transition duration-500 group-hover:translate-x-2 md:block" />
+      <h3 className={`mt-auto text-2xl tracking-[-0.02em] ${tone.title}`}>
+        {service.title}
+      </h3>
+      <p className={`mt-3 text-base leading-7 ${tone.text}`}>
+        {service.description}
+      </p>
     </div>
   );
 }
@@ -57,12 +40,12 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="mx-auto max-w-7xl px-6 py-28 lg:px-10 lg:py-40"
+      className="mx-auto max-w-[1280px] px-6 py-24 lg:px-10"
     >
-      <SectionHeading className="max-w-4xl">
-        Digital não é só estar online. É ser lembrado.
+      <SectionHeading className="max-w-3xl">
+        O que construímos.
       </SectionHeading>
-      <div className="mt-16 grid gap-5">
+      <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, i) => (
           <ServiceCard
             key={service.number}

@@ -2,6 +2,7 @@ import { Globe2, LayoutDashboard, Rocket } from "lucide-react";
 
 export const navLinks = [
   { label: "Serviços", href: "#servicos" },
+  { label: "Projetos", href: "#projetos" },
   { label: "Processo", href: "#processo" },
   { label: "Contato", href: "#contato" },
 ];
@@ -10,23 +11,40 @@ export const services = [
   {
     number: "01",
     icon: Globe2,
-    title: "Sites que posicionam",
+    title: "Sites",
     description:
-      "Presença digital com design estratégico, performance e conteúdo que transforma visitantes em oportunidades.",
+      "Sites com design próprio, feitos para funcionar no celular e no computador.",
   },
   {
     number: "02",
     icon: LayoutDashboard,
     title: "Plataformas sob medida",
     description:
-      "Soluções digitais personalizadas para simplificar processos, conectar pessoas e acelerar o seu negócio.",
+      "Sistemas web e aplicativos feitos para a rotina do seu negócio, a partir do que você precisa resolver.",
   },
   {
     number: "03",
     icon: Rocket,
-    title: "Crescimento contínuo",
+    title: "Acompanhamento depois do lançamento",
     description:
-      "Acompanhamento próximo, evolução constante e tecnologia preparada para o próximo estágio da sua empresa.",
+      "Depois que o projeto vai ao ar, seguimos fazendo ajustes e adicionando o que você precisar.",
+  },
+];
+
+export const projects = [
+  {
+    title: "Geek Promos",
+    description:
+      "Bot que monitora preços de livros e cultura pop em marketplaces e avisa no Telegram quando surge uma promoção.",
+    tags: [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Playwright",
+      "Telegram Bot API",
+    ],
+    cta: "Abrir o canal no Telegram",
+    href: "https://t.me/livrospromosbr",
   },
 ];
 
@@ -34,22 +52,22 @@ export const steps = [
   {
     number: "01",
     title: "Imersão",
-    text: "Entendemos seu negócio, seus objetivos e o que precisa acontecer para gerar resultado.",
+    text: "Conversamos para entender o seu negócio e o que o projeto precisa resolver.",
   },
   {
     number: "02",
     title: "Estratégia",
-    text: "Transformamos ideias em uma direção clara de produto, experiência e comunicação.",
+    text: "Transformamos a conversa em um plano: o que será feito, em que ordem e como vai funcionar.",
   },
   {
     number: "03",
     title: "Construção",
-    text: "Design e tecnologia trabalham juntos para criar uma solução bonita, rápida e funcional.",
+    text: "Desenhamos e programamos o projeto, cuidando do visual e do funcionamento ao mesmo tempo.",
   },
   {
     number: "04",
     title: "Evolução",
-    text: "Lançamos, medimos e seguimos melhorando para sua presença digital nunca ficar para trás.",
+    text: "Depois do lançamento, acompanhamos o uso e fazemos melhorias.",
   },
 ];
 

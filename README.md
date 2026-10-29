@@ -6,6 +6,7 @@ Landing page da SWG Digital, que apresenta o serviço de criação de sites e pl
 
 - **Início:** apresentação com chamada para o contato e um painel animado de exemplo.
 - **Serviços:** os três tipos de entrega (sites, plataformas sob medida e acompanhamento contínuo).
+- **Projetos:** projetos próprios que mostram o que já foi construído, como o bot do Telegram que avisa de promoções de livros.
 - **Processo:** as quatro etapas do trabalho, da primeira conversa à evolução do projeto.
 - **Contato:** formulário que abre o app de e-mail do visitante com a mensagem pronta.
 
@@ -17,7 +18,11 @@ A navegação por âncoras rola devagar até cada seção, e o layout é respons
 - [Vite](https://vite.dev)
 - [Tailwind CSS](https://tailwindcss.com) v4
 - [lucide-react](https://lucide.dev) para os ícones
-- Fontes Bricolage Grotesque e Instrument Sans, pelo `@fontsource`
+- Fontes Bricolage Grotesque (títulos) e Inter (texto), pelo `@fontsource`
+
+## Design
+
+O visual segue o design system descrito em [`DESIGN.md`](./DESIGN.md), um guia inspirado no site da Clay (cores, tipografia, raios e componentes). O arquivo vem do repositório [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/main/design-md/clay), sob licença MIT, e foi adotado sem alterações. Algumas escolhas se afastam dele de propósito: a fonte de títulos (a Plain Black da Clay é licenciada), o texto escuro sobre o card rosa (por contraste) e o hover que sobe devagar.
 
 ## Como rodar
 
@@ -50,7 +55,7 @@ src/
 ## Personalização
 
 - **Textos e e-mail de contato:** `src/data/content.ts`.
-- **Cores e fontes:** bloco `@theme` em `src/index.css`.
+- **Cores e fontes:** bloco `@theme` em `src/index.css`, que usa os tokens do `DESIGN.md`.
 - **Logo e favicon:** `src/components/ui/Logo.tsx` e `public/favicon.svg`.
 
 ## Publicação

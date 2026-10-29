@@ -6,23 +6,22 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="bg-navy px-6 py-28 text-white lg:px-10 lg:py-40"
+      className="mx-auto max-w-[1280px] px-4 py-24 sm:px-6 lg:px-10"
     >
-      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1fr_1fr] lg:items-start">
+      <div className="grid gap-10 rounded-3xl bg-surface-soft p-6 sm:gap-12 sm:p-14 lg:grid-cols-2 lg:items-start lg:p-20">
         <div>
-          <SectionHeading className="max-w-2xl">
-            Seu projeto merece uma presença à altura.
+          <SectionHeading className="max-w-xl">
+            Conte o que você precisa.
           </SectionHeading>
-          <p className="mt-8 max-w-md text-xl leading-9 text-white/70">
-            Conte um pouco sobre o que você está construindo. A gente responde
-            com ideias, caminhos e os próximos passos.
+          <p className="mt-6 max-w-md text-lg leading-8 text-body">
+            Escreva sobre o seu projeto e nós respondemos por e-mail.
           </p>
-          <div className="mt-10 flex items-center gap-3 text-base text-white/75">
-            <ShieldCheck className="h-6 w-6 text-tangerine" /> Primeiro papo sem
-            compromisso
+          <div className="mt-8 flex items-center gap-3 text-sm font-medium text-ink">
+            <ShieldCheck className="h-5 w-5 shrink-0 text-brand-teal" /> Primeira
+            conversa sem compromisso
           </div>
         </div>
-        <div className="rounded-[2.5rem] bg-white p-8 text-navy sm:p-12">
+        <div className="sm:rounded-2xl sm:border sm:border-hairline sm:bg-canvas sm:p-8">
           <ContactForm />
         </div>
       </div>
